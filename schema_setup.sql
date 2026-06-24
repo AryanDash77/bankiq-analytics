@@ -67,3 +67,11 @@ CREATE TABLE loan_payments (
     days_overdue   INT DEFAULT 0,
     FOREIGN KEY (loan_id) REFERENCES loans(loan_id)
 );
+
+
+
+SELECT 'customers'    AS table_name, COUNT(*) AS row_count FROM customers    UNION ALL
+SELECT 'accounts'                  , COUNT(*)         FROM accounts                UNION ALL
+SELECT 'transactions'              , COUNT(*)         FROM transactions             UNION ALL
+SELECT 'loans'                     , COUNT(*)         FROM loans                   UNION ALL
+SELECT 'loan_payments'             , COUNT(*)         FROM loan_payments;
