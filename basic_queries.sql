@@ -1,4 +1,8 @@
-select* from accounts limit 5;
+select* from accounts where balance<5000;
+
+select account_status from accounts;
+
+SELECT COUNT(*) FROM transactions WHERE merchant_category IS NULL;
 
 select* from customers limit 5;
 
@@ -65,9 +69,9 @@ merchant_category is null;
 -- Sort by balance lowest first.
 
 select concat(first_name, ' ' ,last_name) as full_name ,
-account_type , balance , status from accounts join 
+account_type , balance , account_status from accounts join 
 customers on accounts.customer_id = customers.customer_id
-where account_type in ('Inactive','Closed') and balance<5000
+where account_status in ('Inactive','Closed') and balance<5000
 order by balance ;
 
 

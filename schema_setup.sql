@@ -75,3 +75,8 @@ SELECT 'accounts'                  , COUNT(*)         FROM accounts             
 SELECT 'transactions'              , COUNT(*)         FROM transactions             UNION ALL
 SELECT 'loans'                     , COUNT(*)         FROM loans                   UNION ALL
 SELECT 'loan_payments'             , COUNT(*)         FROM loan_payments;
+
+
+ALTER TABLE accounts RENAME COLUMN status TO account_status;
+
+ALTER TABLE loans RENAME COLUMN status to loan_status;
