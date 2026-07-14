@@ -1,6 +1,6 @@
 # ─────────────────────────────────────────────────────────
 # BANKIQ ANALYTICS — Task 2: Data Loading
-# Inserts realistic data into all 5 tables
+# Inserting realistic data into all 5 tables
 # Libraries: mysql-connector-python, faker
 # ─────────────────────────────────────────────────────────
 

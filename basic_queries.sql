@@ -76,6 +76,19 @@ order by balance ;
 
 
 
+-- Some queries to double check other queries
+
+WITH total_txn AS (
+    SELECT account_id, SUM(amount) AS total_trans
+    FROM transactions
+    GROUP BY account_id
+)
+SELECT MAX(total_trans), AVG(total_trans)
+FROM total_txn;
+
+select concat(c.first_name,' ',c.last_name) as full_name , a.balance as bal
+from customers c join accounts a on c.customer_id = a.customer_id;
+
 
 
 
