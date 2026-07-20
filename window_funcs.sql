@@ -65,3 +65,4 @@ city , credit_score , first_value(credit_score) over
 last_value(credit_score) over (partition by city
 order by credit_score desc rows between unbounded preceding
 and unbounded following) as lsal from customers;
+

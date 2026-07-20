@@ -89,6 +89,9 @@ FROM total_txn;
 select concat(c.first_name,' ',c.last_name) as full_name , a.balance as bal
 from customers c join accounts a on c.customer_id = a.customer_id;
 
+select city , count(*) as city_count 
+from customers group by city order by city_count desc;
 
-
-
+select loan_type , count(*) as loan_count ,
+round(sum(principal_amount),2) as total_pa , round(avg(interest_rate),2) as avg_ir ,
+round(avg(emi_amount),2) as avg_emi from loans group by loan_type;
