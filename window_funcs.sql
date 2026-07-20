@@ -26,6 +26,8 @@ order by credit_score desc) as rnk from customers;
 -- For each account, show each transaction amount alongside the previous transaction amount using LAG. 
 -- Display account_id, transaction_date, amount, and prev_amount. 
 
+
+
 -- Q5) 
 -- For each account, show each transaction amount alongside the next transaction amount using LEAD. 
 -- Q6) 
