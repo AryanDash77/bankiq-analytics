@@ -95,3 +95,10 @@ from customers group by city order by city_count desc;
 select loan_type , count(*) as loan_count ,
 round(sum(principal_amount),2) as total_pa , round(avg(interest_rate),2) as avg_ir ,
 round(avg(emi_amount),2) as avg_emi from loans group by loan_type;
+
+SELECT 
+    city,
+    COUNT(*) AS total_customers,
+    COUNT(CASE WHEN credit_score >= 750 THEN 1 END) AS prime_customers
+FROM customers
+GROUP BY city;

@@ -56,8 +56,8 @@ with hbal as (
 select c.customer_id , concat(c.first_name,' ',c.last_name) as full_name , a.balance as bal
 from customers c join accounts a on c.customer_id = a.customer_id)
 
-select customer_id , full_name , max(bal) from hbal
-group by customer_id , full_name;
+select customer_id , full_name , max(bal) as 'htbal'
+from hbal group by customer_id , full_name;
 
 -- Q6)
 -- Business report — using CTEs, calculate for each city: total customers, average credit score, 
